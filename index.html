@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>STACKY</title>
+    <style>
+      * {
+        box-sizing: border-box !important;
+      }
+      html,
+      body {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 400px !important;
+        min-height: 500px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        display: block !important;
+      }
+      #container {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 400px !important;
+        min-height: 500px !important;
+        max-width: none !important;
+        display: block !important;
+      }
+      #game {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 400px !important;
+        min-height: 500px !important;
+        max-width: none !important;
+        display: block !important;
+      }
+      #game canvas {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 400px !important;
+        min-height: 500px !important;
+        max-width: none !important;
+        display: block !important;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./ext.css" />
+  </head>
+  <body class="theme-classic">
+    <!-- partial:index.partial.html -->
+
+    <div id="container">
+      <div id="bg-title">STACKY</div>
+      <div id="game"></div>
+      <div id="score">0</div>
+      <div id="highscore" class="highscore">
+        <img src="./img/crown.svg" alt="High score" class="crown-icon" />
+        <div id="highscore-value" class="highscore-value">0</div>
+      </div>
+      <div id="instructions">
+        Click (or press the spacebar) to place the block
+      </div>
+      <div id="placement-feedback" class="placement-feedback"></div>
+      <div class="game-over">
+        <div class="game-over-card">
+          <h2>Game Over</h2>
+          <div class="final-score-container">
+            <div class="final-score-label">Your Score</div>
+            <div class="final-score">0</div>
+          </div>
+          <div class="highscore-badge" style="display: none">
+            <img
+              src="./img/crown.svg"
+              alt="New Highscore"
+              class="crown-icon-small"
+            />
+            <span>New Highscore!</span>
+          </div>
+          <p class="game-over-subtitle">You did great, you're the best.</p>
+          <button class="game-over-cta" type="button">
+            Click or press space to play again
+          </button>
+        </div>
+      </div>
+      <div class="game-ready">
+        <div id="start-button">Start</div>
+        <div></div>
+      </div>
+      <div class="dropdown">
+        <a class="dropbtn"><img src="./img/list.svg" alt="Menu" /></a>
+        <div class="dropdown-content">
+          <a class="dropdown-item" target="_blank" href="index.html"
+            >Fullscreen</a
+          >
+          <button class="dropdown-item easy-mode-toggle" type="button">
+            Toggle easy mode
+          </button>
+          <button class="dropdown-item faster-blocks-toggle" type="button">
+            Faster Blocks
+          </button>
+          <a
+            class="dropdown-item support-dev-link"
+            target="_blank"
+            href="https://buymeacoffee.com/galore"
+          >
+            <img class="heart-icon" src="./img/heart.svg" alt="Heart icon" />
+            Support the dev
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="./js/three.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
